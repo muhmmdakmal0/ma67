@@ -1,0 +1,985 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Akmal - Personal Website</title>
+
+    <style>
+        /* Base Styling */
+        body {
+        background-image: url('mybackground.jpg'); 
+	    background-attachment: fixed;
+    	background-position: center;
+    	background-repeat: no-repeat;
+   	    background-size: 1550px 695px;
+        color: #fafbfc;
+        font-family: Arial, Courier, monospace;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+	    
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #3498db;
+            font-size: 25px;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #e74c3c;
+            width: 80%;
+            margin: 10px auto;
+        }
+
+        /* Header and Footer */
+        header {
+            
+            padding: 200px 0 0px 0;
+            font-size: 1.5em;
+            letter-spacing: 2px;
+            text-align: center;
+            padding-left: 20px;
+	    background-image: url('Header1.jpg'); 
+            background-size: 1550px 1000px;
+            background-position: right;
+            background-color: #000000; 
+            
+        }
+
+        header h1 {
+            color: white;
+            background-color: #8f8b8b;
+            margin-left: -20;
+	    margin-bottom: 0;
+            font-size: 1.2em;
+        }
+
+        /* Footer */
+.custom-footer {
+    background-color: #000; 
+    color: #fff; 
+    padding: 40px 60px 20px; 
+    margin-left: -230px;
+    margin-right: -50px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+.custom-footer .footer-content-wrapper {
+    display: grid;
+    
+    grid-template-columns: 1.5fr repeat(4, 1fr); 
+    gap: 40px; 
+    padding-bottom: 50px;
+    border-bottom: 1px solid #333; 
+}
+
+
+.custom-footer .footer-project-statement {
+    
+    grid-column: 1 / 2;
+    padding-right: 40px; 
+}
+
+.custom-footer .project-pre-title {
+    color: #888; 
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.custom-footer .project-title {
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 700; 
+    margin: 0;
+    padding: 0;
+    max-width: 450px; 
+}
+
+
+.custom-footer .footer-links-grid {
+    
+    grid-column: 2 / 6; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+}
+
+
+.custom-footer .footer-column {
+    list-style: none;
+    padding: 0;
+}
+
+.custom-footer .column-title {
+    font-size: 16px;
+    font-weight: 700; 
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #fff; 
+}
+
+.custom-footer .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-footer .footer-column li {
+    margin-bottom: 8px;
+}
+
+.custom-footer .footer-column li,
+.custom-footer .footer-column a {
+    color: #888; 
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.custom-footer .footer-column a:hover {
+    color: #fff;
+}
+
+
+
+.custom-footer .footer-copyright-bar {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.custom-footer .copyright-text {
+    color: #555; 
+    font-size: 12px;
+    margin: 0;
+}
+
+
+@media (max-width: 1200px) {
+    .custom-footer .footer-content-wrapper {
+        grid-template-columns: 1fr; 
+    }
+
+    .custom-footer .footer-project-statement {
+        grid-column: 1 / -1;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .custom-footer .footer-links-grid {
+        grid-column: 1 / -1;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
+    }
+}
+
+        /* Top Navigation Bar */
+        nav.top-navigation {
+            background-color: #222222;
+            color: white;
+            display: flex;
+            justify-content: flex-start;
+            padding: 5px 20px;
+        }
+
+        nav.top-navigation a, nav.top-navigation div {
+            color: white;
+            padding: 5px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        nav.top-navigation a:hover, nav.top-navigation div:hover {
+            background-color: #3498db;
+        }
+
+        /* Sidebar Navigation */
+
+        nav.sidebar {
+            width: 200px;
+            
+            padding: 20px 0;
+            position: absolute;
+            height: auto;
+            float: left;
+            text-align: left;
+            min-height: 0px; 
+        }
+
+        nav.sidebar a, nav.sidebar div {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+            transition: background-color 0.1s;
+        }
+
+        nav.sidebar a:hover {
+            background-color: #0937f0;
+            border-radius: 1000px;
+        }
+        .custom-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #565656; 
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    letter-spacing: 2px;
+    border-radius: 50px 15px 15px 50px; 
+    padding: 3px 15px 3px 3px; 
+    box-shadow: 0px 4px 0px #ffffff; 
+    transition: transform 0.1s ease;
+    cursor: pointer;
+  }
+
+ 
+  .icon-circle {
+    background-color: rgb(2, 251, 10);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    box-shadow: inset 0px 1px 3px rgba(0,0,0,0.2);
+  }
+
+  
+  .arrow {
+    border: solid #0062ff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin-left: -3px;
+  }
+
+  
+  .custom-button:hover {
+    background-color: #00ff15;
+    transform: translateY(-1px);
+  }
+
+  
+  .custom-button:active {
+    box-shadow: 0px 1px 0px #07cc00;
+    transform: translateY(3px);
+  }
+
+.search-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ffffff; 
+    color: #5b5b5b; 
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 4px 4px 0px #000000;
+    cursor: pointer;
+    position: relative;
+  }
+
+  
+  .text-side {
+    padding: 9px 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  
+  .line {
+    width: 2px;
+    height: 20px;
+    background-color: rgba(8, 255, 24, 0.8);
+    margin: 0 10px;
+  }
+  
+  .right-line { background-color: #00ff08; }
+
+  
+  .text-side::after {
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 15px solid #00ff08; 
+    z-index: 2;
+  }
+
+  
+  .icon-side {
+    background-color: rgb(97, 97, 97);
+    padding: 9px 10px 9px 25px; 
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  
+  .search-icon {
+    width: 12px;
+    height: 12px;
+    border: 3px solid #000000;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .search-icon::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 8px;
+    background-color: #2D3436;
+    bottom: -5px;
+    right: -3px;
+    transform: rotate(-45deg);
+  }
+
+ 
+  .search-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #1100ff;
+  }
+
+  .search-button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px #1100ff;
+  }
+      
+
+.content-container {
+ margin-left: 200px;
+ padding: 20px;
+text-align: center;
+}
+
+
+.content-box {
+    
+    background-color: grey;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+.outlined-text {
+  color: #13a8ad; 
+  text-shadow: 
+     1px  1px  #05fc53,  
+     1px  1px  #000,
+     1px  2px  #000,
+     2px  2px  #000; 
+}
+
+        /* Styling for all content blocks */
+        section {
+	    background-image: url('blockbackground.jpg');
+	    background-size: cover;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 2);
+            width: 65%; 
+            box-sizing: border-box;
+            text-align: left;
+        }
+#favourites{
+	    background-image: url('favbackground.jpg');
+            background-size: cover;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 2);
+            width: 65%; 
+            box-sizing: border-box;
+            text-align: left;
+}
+#audio{
+	    background-image: url('blockbackground2.jpg');
+	    background-size: 880px 400px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 2);
+            width: 65%; 
+            box-sizing: border-box;
+            text-align: left;
+}        
+        section p {
+            text-align: justify;
+        }
+
+        /* Alignment Classes */
+
+        
+        .align-left {
+            float: left;
+            margin-left: 10px; 
+        }
+
+       
+        .align-right {
+            float: right;
+            margin-right: 10px; 
+        }
+
+        
+        .image-container {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .image-container img {
+            border: 4px solid #3498db;
+            border-radius: 8px;
+        }
+/* Favorites Section Specific Styling */
+.movie-item {
+    display: flex; 
+    align-items: flex-start; 
+    gap: 15px; 
+    margin-bottom: 20px;
+    border: 1px solid #dcdde1; 
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.gif-placeholder img {
+    
+    width: 150px; 
+    height: auto;
+    display: block; 
+    border-radius: 4px;
+}
+
+.movie-info {
+    text-align: left;
+    flex-grow: 1; 
+}
+
+.movie-info h4 {
+    color: #e74c3c; 
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.movie-info p {
+    font-size: 0.9em;
+    color: #2c3e50;
+    text-align: left; 
+}
+
+       /* Song List Specific Styling */
+#audio {
+    
+    background-color: #000000;
+    color: white; 
+}
+
+
+.song-title { 
+    font-weight: bold; 
+    color: #3498db; 
+}
+
+
+.song-artist { 
+    font-size: 0.9em; 
+    margin-bottom: 5px; 
+    color: #cccccc; 
+}
+
+.song-list {
+    padding: 20px 0;
+}
+
+.song-card {
+    
+    background-color: #333333;
+    padding: 15px; 
+    border-radius: 5px;
+    width: 95%;
+    margin: 10px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+}
+
+
+.song-cover img {
+    width: 90px;
+    height: 90px;
+    border-radius: 5px;
+    object-fit: cover; 
+}
+
+
+.song-details {
+    flex-grow: 1; 
+    text-align: left;
+}
+
+audio { 
+    width: 100%; 
+    margin-top: 5px; 
+}
+/* Slideshow Styling */
+.slideshow-container {
+  max-width: 30%; 
+  position: relative;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 8px; 
+  overflow: hidden; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+.mySlides {
+  display: none;
+ 
+}
+
+
+
+
+.numbertext {
+  color: #000000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #404040;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #0d00ff; 
+}
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Personal Website :3</h1>
+    </header>
+
+    <nav class="top-navigation">
+        <div style="font-style: italic; margin-right: 15px;"></div>
+	<a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/index.html">HOME</a>
+        <a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/WORK/WORK.html">WORK</a>
+        <a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/EDUCATION/EDUCATION.html">EDUCATION</a>
+        <a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/HOBBY/HOBBY.html">HOBBY</a>
+	<a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/GALLERY/GALLERY.html">GALLERY</a>
+    </nav>
+
+    <nav class="sidebar">
+        
+        <hr style="width: 80%; background-color: #dcdde1;">
+        <a href="#overview">About (Overview)</a>
+        <a href="#background">Background</a>
+        <a href="#achievement">Achievement</a>
+        <a href="#favourites">Favourites</a>
+        <a href="#audio">Song</a>
+        <hr style="width: 80%; background-color: #dcdde1;">
+
+        <div id="social-media">
+            SOCIAL MEDIA LINKS
+            <div class="social-media">
+                <a href ="www.facebook.com" target="_blank"><img src="facebook.jpg" width="30" height="30" alt="Facebook Icon" style="border-radius: 30px; width: 50px; height: 50;"></a>
+                <a href ="https://share.google/xxAOPGXmc5TIiIVRC" target="_blank"><img src="insta.jpg" width="30" height="30" alt="Instagram Icon" style="border-radius: 30px; width: 50px; height: 50;"></a>
+		<a href ="https://wa.me/601136006542?text=I'm%20interested%20with%20your%20business.%20How%20can%20I%20schedule%20it?%20"><img src="whatsapp.jpg" alt="Instagram Icon" style="border-radius: 30px; width: 50px; height: 50;"></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-container clearfix">
+    
+        <section id="overview" class="align-left">
+        
+            <h2>Overview</h2>
+            <p> <div class="outlined-text"> <div class="content-box">My full name is Muhammad Akmal bin Zolkefli, currently studying at UiTM Segamat, Johor. Live in Taman Duyung Permai, Malacca. I am the third of 5 siblings (Middle Child). Previously I went to school at JAIM Assyakirin Arab High School. Love multitasking and do variety of activities on free time. I am gathering experience and improving skills for future use. Additionally, I want to find inspiration and learn through my hobbies and free time.</p></div></div>
+
+<div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="profile1.jpg" style="width:100%">
+        
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="profile2.jpg" style="width:100%">
+       
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="profile3.jpg" style="width:100%">
+       
+      </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+        </section>
+
+        <div style="clear: both;"></div>
+
+        <section id="background" class="align-right">
+            <h2>BACKGROUND</h2>
+            <h3 id="hobby">HOBBY</h3>
+            <p><div class="content-box">Spend my free time with excercise, gaming and editing. Love to watch tech review and so on.</p></div>
+
+            <h4 id="education">EDUCATION</h4>
+            <p><div class="content-box">Finished high school with the Malaysian Certificate of Education (SPM) in Arabic and religion. Then continued my studies at Universiti Teknologi Mara, Segamat in Diploma Information Science.</p></div>
+        </section>
+
+        <div style="clear: both;"></div>
+
+        <section id="achievement" class="align-left">
+            <h4>Achievement Section</h4>
+            <h5 id="work-experience">WORK EXPERIENCE</h5>
+            <p> <div class="outlined-text"> <div class="content-box">I only have a little bit experience in work environment for now. But I will improve my work section in future for better trustworthy and getting better with cooperation.</p>
+ <a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/WORK/WORK.html" class="custom-button">
+    <div class="icon-circle">
+      <i class="arrow"></i>
+    </div>
+    LEARN MORE
+  </a>
+           
+</div>
+</div>
+            <h6>Achievement</h6> 
+                <p> <div class="outlined-text"> <div class="content-box">I managed to achieve some achievements in school although not as great and as good as others. I also managed to get achievements in the field of work especially during Industrial Training not long ago.</p>
+                <a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/EDUCATION/EDUCATION.html" class="search-button">
+    <div class="text-side">
+      <div class="line"></div>
+      LEARN MORE
+    </div>
+    <div class="icon-side">
+      <div class="search-icon"></div>
+      <div class="line right-line"></div>
+    </div>
+  </a>
+            </div>
+        </section>
+
+        <div style="clear: both;"></div>
+
+        <section id="favourites" class="align-right">
+    <h6>FAVOURITE MOVIES & CHARACTERS</h6>
+    <p>Some of my favorite movies below:</p>
+    
+    <div class="movie-gifs">
+        
+        <div class="movie-item">
+            <div class="gif-placeholder">
+                <img src="Interstellar.gif" alt="Interstellar GIF">
+            </div>
+            <div class="movie-info">
+                <h4>Interstellar (2014)</h4>
+                <p><div class="content-box">A profound sci-fi epic exploring space travel, time dilation, and the survival of humanity. A visually stunning film with a powerful, emotional core.</p></div>
+
+            </div>
+        </div>
+        
+        <div class="movie-item">
+            <div class="gif-placeholder">
+                <img src="Inception.gif" alt="Inception GIF">
+            </div>
+            <div class="movie-info">
+                <h4>Inception (2010)</h4>
+                <p><div class="content-box">A mind-bending thriller where a skilled thief enters people's dreams to steal or plant ideas. Complex layers of reality and subconscious exploration make it fascinating.</p></div>
+            </div>
+        </div>
+
+        <div class="movie-item">
+            <div class="gif-placeholder">
+                <img src="Shawshank.gif" alt="The Shawshank Redemption GIF">
+            </div>
+            <div class="movie-info">
+                <h4>The Shawshank Redemption (1994)</h4>
+                <p><div class="content-box">An inspiring tale of hope, resilience, and friendship in the face of immense adversity within a prison setting. A true cinematic masterpiece.</p></div>
+            </div>
+        </div>
+
+        <div class="movie-item">
+            <div class="gif-placeholder">
+                <img src="Truman.gif" alt="The Truman Show GIF">
+            </div>
+            <div class="movie-info">
+                <h4>The Truman Show (1998)</h4>
+                <p><div class="content-box">A satirical sci-fi dramedy about a man who discovers his entire life is a reality television show. A poignant commentary on media, privacy, and authenticity.</p></div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+        <div style="clear: both;"></div>
+
+       <section id="audio" class="align-left">
+    <h2><div class="content-box">🎵 My Favorite Songs</h2>
+    <div class="song-list">
+        
+        <div class="song-card">
+            <div class="song-cover">
+                <img src="cover1.jpeg" alt="Album Cover for Bintang Yang Hilang">
+            </div>
+            <div class="song-details">
+                <div class="song-title">Evergreen (EXTENDED)</div>
+                <div class="song-artist">Artist: Richy Mitch & The Coal Miners</div>
+                <audio controls>
+                    <source src="fav1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="song-card">
+            <div class="song-cover">
+                <img src="cover2.jpeg" alt="Album Cover for Let It Happen">
+            </div>
+            <div class="song-details">
+                <div class="song-title">Let It Happen</div>
+                <div class="song-artist">Artist: Tame Impala</div>
+                <audio controls>
+                    <source src="fav2.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="song-card">
+            <div class="song-cover">
+                <img src="cover3.jpeg" alt="Album Cover for Tunggu Apa Lagi">
+            </div>
+            <div class="song-details">
+                <div class="song-title">Ma Meilleure Ennemie</div>
+                <div class="song-artist">Artist: Stromae, Pomme</div>
+                <audio controls>
+                    <source src="fav3.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </div>
+ <h2><div class="content-box">🎵 My Favorite Instrumental</h2>
+    <div class="song-list">
+        
+        <div class="song-card">
+            <div class="song-cover">
+                <img src="cover11.jpeg" alt="Album Cover for Interstellar Soundtrack">
+            </div>
+            <div class="song-details">
+                <div class="song-title">Cornfield Chase</div>
+                <div class="song-artist">Artist: Hans Zimmer</div>
+                <audio controls>
+                    <source src="fav11.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="song-card">
+            <div class="song-cover">
+                <img src="cover22.jpeg" alt="Album Cover for Somebody's Pleasure">
+            </div>
+            <div class="song-details">
+                <div class="song-title">Killswitch Lullaby</div>
+                <div class="song-artist">Artist: Flawed Mangoes</div>
+                <audio controls>
+                    <source src="fav22.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="song-card">
+            <div class="song-cover">
+                <img src="cover33.jpg" alt="Album Cover for Tunggu Apa Lagi">
+            </div>
+            <div class="song-details">
+                <div class="song-title">Can You Hear The Music</div>
+                <div class="song-artist">Artist: Ludwig Göransson</div>
+                <audio controls>
+                    <source src="fav33.mp3" type="audio/mpeg">
+
+</section>
+        
+        <div style="clear: both;"></div>
+
+   <footer class="custom-footer">
+    <div class="footer-content-wrapper">
+        <div class="footer-project-statement">
+            <p class="project-pre-title">IMD318 Individual Project by Muhammad Akmal</p>
+            <h2 class="project-title">
+                I am building and maintaining software and hardware since semester 3.
+            </h2>
+        </div>
+
+        <div class="footer-links-grid">
+            
+            <div class="footer-column">
+                <h4 class="column-title">Docs</h4>
+                <ul>
+                    <li>Getting Started</li>
+                    <li>Reference</li>
+                    <li>Examples</li>
+                    <li>Components</li>
+                    <li>Showcase</li>
+                    <li>Tutorial</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4 class="column-title">Social</h4>
+                <ul>
+                    <li>Discord</li>
+                    <li>Github</li>
+                    <li>X / Twitter</li>
+                    <li>Reddit</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4 class="column-title">Coding</h4>
+                <ul>
+                    <li>C++</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Other</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4 class="column-title">More</h4>
+                <ul>
+                    <li>Work</li>
+                    <li>Consultation</li>
+                    <li>Meet</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright-bar">
+        <p class="copyright-text">muhmmdakmal0@gmail.com — Copyright © 2025 . All rights reserved — website design by Muhammad Akmal</p>
+    </div>
+</footer>
+
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            
+            
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }    
+            
+            
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            
+            
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            
+            
+            setTimeout(showSlides, 4000); 
+        }
+
+        
+        function currentSlide(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+
+          
+          slideIndex = n;
+
+          
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+
+         
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+    </script>
+    </body>
+</html>
+</body>
+</html>
