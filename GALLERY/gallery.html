@@ -1,0 +1,358 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Akmal - Photo Gallery</title>
+
+<style>
+    /*BASE STYLING*/
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('mybackground.jpg'); 
+	    background-attachment: fixed;
+    	background-position: center;
+    	background-repeat: no-repeat;
+   	    background-size: 1550px 695px;
+    }
+    footer {
+            background-color: #000000;
+            color: white;
+            padding: 10px 0;
+            font-size: 0.9em;
+            clear: both; 
+            margin-top: 5px;
+            text-align: center;
+        }
+
+    /*central content area */
+    .main-content-wrapper {
+        background-color: white; 
+        max-width: 1200px;
+        margin: 0 auto; 
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        min-height: 100vh;
+    }
+
+    /*Top Navigation Bar*/
+    nav.top-navigation {
+        background-color: #222222;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        padding: 5px 20px;
+    }
+
+    nav.top-navigation a, nav.top-navigation div {
+        color: white;
+        padding: 5px 15px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s;
+        cursor: pointer;
+    }
+
+    nav.top-navigation a:hover, nav.top-navigation div:hover {
+        background-color: #3498db;
+    }
+
+    /*Hero/Introduction Section */
+    .hero {
+        padding: 60px 20px;
+        text-align: center;
+        background-image: url('blockbackground.jpg'); 
+	    background-attachment: fixed;
+    	background-position: center;
+    	background-repeat: no-repeat;   
+   	    background-size: 1500px 1000px; 
+    }
+
+    .hero h1 {
+        font-size: 4em;
+        font-weight: 300;
+        margin: 0 0 10px 0;
+        color: #009dff;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    
+    .content-box {
+   	    background-color: rgb(85, 85, 85);
+        padding: 10px;
+        border-radius: 5px;
+        color: #00ff1e;
+}
+
+
+
+    /* FILTER NAVIGATION STYLING */
+
+    .filter-nav {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 40px; 
+    }
+
+    .filter-nav a {
+        
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 0 5px;
+        text-decoration: none;
+        color: #f7f7f7; 
+        border: 1px solid #757575;
+        background-color: #555;
+        font-size: 0.9em;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        border-radius: 5px; 
+        font-weight: bold;
+    }
+
+    .filter-nav a:hover {
+        background-color: #f70505; 
+        border-color: #3498db;
+        color: white;
+        cursor: pointer;
+    }
+
+    .filter-nav a.active {
+       
+        background-color: #00aaff; 
+        border-color: #00aaff;
+        color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    }
+
+    /* GALLERY GRID LAYOUT */
+
+    .gallery-container {
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+        gap: 10px; 
+        padding-bottom: 50px;
+    }
+
+    .gallery-item {
+        overflow: hidden;
+        position: relative;
+        
+        padding-top: 100%; 
+        transition: box-shadow 0.3s ease; 
+    }
+
+    .gallery-item:hover {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); 
+    }
+
+    .gallery-item img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 1s ease;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.05);
+        opacity: 0.9;
+        
+        border: 3px solid #00aaff; 
+        box-sizing: border-box; 
+    }
+
+    
+    .w-2 {
+        grid-column: span 2;
+    }
+    .h-2 {
+        
+        padding-top: 200%; 
+    }
+        
+</style>
+</head>
+<body>
+
+    <div class="top-header">
+        <nav class="top-navigation">
+            <div style="font-style: italic; margin-right: 15px;"></div>
+            <a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/index.html">HOME</a>
+            <a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/WORK/WORK.html">WORK</a>
+            <a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/EDUCATION/EDUCATION.html">EDUCATION</a>
+            <a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/HOBBY/HOBBY.html">HOBBY</a>
+            <a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/GALLERY/GALLERY.html">GALLERY</a>
+        </nav>
+    </div>
+
+    <div class="main-content-wrapper">
+
+        <div class="hero">
+            <h1>MY GALLERY.</h1>
+            <p><div class="content-box">In this corner, there are many sweet memories and experiences that I can turn into beautiful memories and meaningful lessons in life :3.</p></div>
+
+        <nav class="filter-nav">
+            <a href="#" class="active" data-category="all">ALL</a> 
+            <a href="#" data-category="scenery">SCENERY</a>
+            <a href="#" data-category="friends">FRIENDS</a>
+            <a href="#" data-category="family">FAMILY</a>
+            <a href="#" data-category="random">RANDOM</a>
+        </nav>
+        
+        <div class="gallery-container">
+            <div class="gallery-item" data-category="scenery">
+                <img src="scenery1.jpg" alt="Lake Landscape">
+            </div>
+            <div class="gallery-item w-2" data-category="scenery">
+                <img src="scenery2.jpg" alt="Lakeside">
+            </div>
+            <div class="gallery-item h-2" data-category="scenery">
+                <img src="scenery3.jpg" alt="Mountain">
+            </div>
+            <div class="gallery-item h-2" data-category="scenery">
+                <img src="scenery4.jpg" alt="Gunung Ledang">
+            </div>
+            <div class="gallery-item h-2" data-category="scenery">
+                <img src="scenery5.jpg" alt="Gunung Ledang">
+            </div>
+            <div class="gallery-item h-2" data-category="scenery">
+                <img src="scenery6.jpg" alt="Gunung Ledang">
+            </div>
+            <div class="gallery-item h-2" data-category="scenery">
+                <img src="scenery7.jpg" alt="Gunung Ledang">
+            </div>
+
+            <div class="gallery-item w-2" data-category="friends">
+                <img src="friends1.jpg" alt="Friends laughing at a table">
+            </div>
+            <div class="gallery-item" data-category="friends">
+                <img src="friends2.jpg" alt="Friends taking a selfie">
+            </div>
+            <div class="gallery-item" data-category="friends">
+                <img src="friends3.jpg" alt="Group photo">
+            </div>
+            <div class="gallery-item" data-category="friends">
+                <img src="friends4.jpg" alt="Group photo">
+            </div>
+            <div class="gallery-item" data-category="friends">
+                <img src="friends5.jpg" alt="Group photo">
+            </div>
+            <div class="gallery-item" data-category="friends">
+                <img src="friends6.jpg" alt="Group photo">
+            </div>
+            <div class="gallery-item" data-category="friends">
+                <img src="friends7.jpg" alt="Group photo">
+            </div>
+
+            <div class="gallery-item" data-category="family">
+                <img src="family1.jpg" alt="Family dinner">
+            </div>
+            <div class="gallery-item" data-category="family">
+                <img src="family2.jpg" alt="Holding hands">
+            </div>
+            <div class="gallery-item w-2" data-category="family">
+                <img src="family3.jpg" alt="Family trip photo">
+            </div>
+             <div class="gallery-item w-2" data-category="family">
+                <img src="family4.jpg" alt="Family trip photo">
+            </div>
+             <div class="gallery-item w-2" data-category="family">
+                <img src="family5.jpg" alt="Family trip photo">
+            </div>
+             <div class="gallery-item w-2" data-category="family">
+                <img src="family6.jpg" alt="Family trip photo">
+            </div>
+             <div class="gallery-item w-2" data-category="family">
+                <img src="family7.jpg" alt="Family trip photo">
+            </div>
+             <div class="gallery-item w-2" data-category="family">
+                <img src="family8.jpg" alt="Family trip photo">
+            </div>
+             <div class="gallery-item w-2" data-category="family">
+                <img src="family9.jpg" alt="Family trip photo">
+            </div>
+             <div class="gallery-item w-2" data-category="family">
+                <img src="family10.jpg" alt="Family trip photo">
+            </div>
+            
+            <div class="gallery-item" data-category="random">
+                <img src="random1.jpg" alt="Close-up of a dog on a surfboard">
+            </div>
+            <div class="gallery-item h-2" data-category="random">
+                <img src="random2.jpg" alt="Coffee beans in a sack">
+            </div>
+            <div class="gallery-item" data-category="random">
+                <img src="random3.jpg" alt="Motorcycle close-up">
+            </div>
+
+            <div class="gallery-item w-2" data-category="random">
+                <img src="random4.jpg" alt="A red sports car">
+            </div>
+            <div class="gallery-item" data-category="random">
+                <img src="random5.jpg" alt="A close up of a hand holding a ring">
+            </div>
+            <div class="gallery-item" data-category="random">
+                <img src="random6.jpg" alt="A piece of fruit">
+            </div>
+            
+        </div>
+    </div>
+    <footer>
+
+        Copyright &copy;
+        <span style='font-size:20px;'>&#128513;</span>
+        MUHAMMAD AKMAL ZOLKEFLI
+    </footer>
+
+</div> 
+        </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterNav = document.querySelector('.filter-nav');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            
+            filterNav.addEventListener('click', function(event) {
+                
+                if (event.target.tagName === 'A') {
+                    event.preventDefault(); 
+                    
+                    const selectedCategory = event.target.getAttribute('data-category');
+                    
+                    
+                    
+                    
+                    filterNav.querySelectorAll('a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    
+                    
+                    event.target.classList.add('active');
+                    
+                    
+                    
+                    galleryItems.forEach(item => {
+                        const itemCategory = item.getAttribute('data-category');
+                        
+                        
+                        if (selectedCategory === 'all' || itemCategory === selectedCategory) {
+                            item.style.display = 'block'; 
+                        } else {
+                            item.style.display = 'none'; 
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
