@@ -1,0 +1,284 @@
+<html>
+<body>
+
+<style>
+/* Base Styling */
+        body {
+	    background-image: url('mybackground.jpg'); 
+	    background-attachment: fixed;
+    	    background-position: center;
+    	    background-repeat: no-repeat;
+   	    background-size: 1550px 695px;
+        color: #d42035;
+        font-family: Arial, Courier, monospace;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+	
+}
+
+    header h1 {
+        color: blue;
+        background-color: #5e5c5c;
+        margin-left: -100;
+        margin-right: -100;
+	    margin-bottom: 0;
+        margin-top: 0;
+        font-size: 3em;
+	    text-align: center;
+        }
+
+        h2 {
+        color: blue;
+        }
+
+        footer {
+            background-color: #000000;
+            color: white;
+            padding: 10px 0;
+            font-size: 0.9em;
+            clear: both; 
+            margin-top: 5px;
+            text-align: center;
+        }
+
+
+   
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 100px; }
+    .experience-entry {border: 0px solid #ccc; padding: 0px; margin-bottom: 0px; border-radius: 0px; overflow: auto; 
+                      background-image: linear-gradient(to bottom, #fdfcfd, #7e7d7e, #030303);
+                      
+                      
+                      
+    
+    }
+
+   
+    /*  MARQUEE EFFECT  */
+
+    /* Outer Container for Clipping */
+    .marquee-container {
+        width: 100%;
+        height: 180px; 
+        overflow: hidden;
+        margin-bottom: 0px; 
+        background-image: url('mybackground.jpg');
+        background-attachment: fixed;
+    	background-position: center;
+    	background-repeat: no-repeat;
+   	    background-size: 1550px 695px;
+        display: flex; 
+        background-color: #5e5c5c; 
+    }
+
+    /* Inner Content Block */
+    .marquee-content {
+	background-image: transparent;
+        display: flex;
+        min-width: 30%; 
+        animation: scroll-left 5s linear infinite; 
+        will-change: transform; 
+    }
+
+    /* Pause on hover */
+    .marquee-container:hover .marquee-content {
+        animation-play-state: paused;
+    }
+
+    /* Image Styling within Marquee */
+    .marquee-img {
+        height: 100%; 
+        width: auto; 
+        object-fit: contain;
+        margin-right: 50px; 
+        flex-shrink: 0; 
+    }
+    
+    /* 4. The Animation Keyframes */
+    @keyframes scroll-left {
+        0% { transform: translateX(50%); }
+        100% { transform: translateX(-100%); }
+    }
+
+/* --- Top Navigation Bar --- */
+        nav.top-navigation {
+            background-color: #222222;
+            color: white;
+            display: flex;
+            justify-content: flex-start;
+            padding: 5px 20px;
+            margin-left: -100;
+            margin-right: -100;
+            margin-top: -100;
+        }
+
+        nav.top-navigation a, nav.top-navigation div {
+            color: rgb(255, 255, 255);
+            padding: 5px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        nav.top-navigation a:hover, nav.top-navigation div:hover {
+            background-color: #3498db;
+        }
+</style>
+
+
+<nav class="top-navigation">
+        <div style="font-style: italic; margin-right: 15px;"></div>
+	<a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/index.html">HOME</a>
+        <a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/WORK/WORK.html">WORK</a>
+        <a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/EDUCATION/EDUCATION.html">EDUCATION</a>
+        <a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/HOBBY/HOBBY.html">HOBBY</a>
+	<a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/GALLERY/GALLERY.html">GALLERY</a>
+    </nav>
+
+<header>
+    <h1><img src="job5.gif" style="width:7%" alt="study gif.">🤗 My Work Experience 🤗<img src="job5.gif" style="width:7%" alt="study gif."></h1>
+</header>
+<section>
+ 
+    <div class="experience-entry">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <img class="marquee-img" src="work1.jpg" alt="Arkib UiTM">
+                <img class="marquee-img" src="work11.jpg" alt="Second Work Pic">
+                <img class="marquee-img" src="work111.jpg" alt="Third Work Pic">
+                <img class="marquee-img" src="work1111.jpg" alt="Arkib UiTM">
+                <img class="marquee-img" src="work11111.jpg" alt="Work Pic">
+                <img class="marquee-img" src="work111111.jpg" alt="Work Pic">
+                <img class="marquee-img" src="work1111111.jpg" alt="Work Pic">
+                <img class="marquee-img" src="work11111111.jpg" alt="Work Pic">
+               
+
+
+            </div>
+        </div>
+        <div class="experience-entry">
+            <h2>Internship Student | Library Sector</h2>
+            <p><strong>Dates:</strong> July 2025 – October 2025 | <strong>Location:</strong> Malacca City, MY</p>
+            <ul>
+                <li>Successfully completing library inventory management in digital and physical.</li>
+                <li>Managed Library Program collaboration with foreign University.</li>
+                <li>Actively join any event and program that UiTM Bandaraya Melaka organized..</li>
+            </ul>
+        </div>
+    </div>
+    <div class="experience-entry">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <img class="marquee-img" src="work2.jpg" alt="Arkib UiTM">
+                <img class="marquee-img" src="work22.jpg" alt="Second Work Pic">
+                <img class="marquee-img" src="work222.jpg" alt="Third Work Pic">
+                <img class="marquee-img" src="work2222.jpg" alt="Arkib UiTM">
+                <img class="marquee-img" src="work22222.jpg" alt="Work Pic">
+                <img class="marquee-img" src="work222222.jpg" alt="Work Pic">
+                <img class="marquee-img" src="work2222222.jpg" alt="Arkib UiTM">
+                <img class="marquee-img" src="work22222222.jpg" alt="Second Work Pic">
+                <img class="marquee-img" src="work222222222.jpg" alt="Third Work Pic">
+                <img class="marquee-img" src="work2222.jpg" alt="Arkib UiTM">
+                <img class="marquee-img" src="work22222.jpg" alt="Work Pic">
+                <img class="marquee-img" src="work222222.jpg" alt="Work Pic">
+                <img class="marquee-img" src="work2222.jpg" alt="Arkib UiTM">
+                <img class="marquee-img" src="work22222.jpg" alt="Work Pic">
+                <img class="marquee-img" src="work222222.jpg" alt="Work Pic">
+
+
+ </div>
+ </div>
+
+        <div class="experience-entry">
+            <h2>Head Waiter | Food And Beverage</h2>
+            <p><strong>Dates:</strong> Jun 2023 – Aug 2023 | <strong>Location:</strong> Malacca Trade Center, Malacca, MY</p>
+            <ul>
+		<li>Ledco Works Sdn Bhd.</li>
+                <li>Ensure customer satisfication and needs when it comes to serving food.</li>
+                <li>Work directly with employees and customers to gather requirements and provide technical support.</li>
+                <li>Hosting events in restaurant main hall.</li>
+  	        <li>Treating special guests as VVIPs.</li>
+            </ul>
+       </div>
+ </div>
+           
+<div class="experience-entry">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <img class="marquee-img" src="work3.jpg" alt="Work">
+                <img class="marquee-img" src="work33.jpg" alt="Second Work Pic">
+                <img class="marquee-img" src="work333.jpg" alt="Third Work Pic">
+                <img class="marquee-img" src="work3333.jpg" alt="Arkib UiTM">
+                <img class="marquee-img" src="work3.jpg" alt="Work">
+                <img class="marquee-img" src="work33.jpg" alt="Second Work Pic">
+                <img class="marquee-img" src="work333.jpg" alt="Third Work Pic">
+                <img class="marquee-img" src="work3333.jpg" alt="Arkib UiTM">
+               
+
+            </div>
+        </div>
+        <div class="details">
+            <h2>Asisstant Manager | FnB</h2>
+            <p><strong>Dates:</strong> July 2025 – October 2025 | <strong>Location:</strong> Malacca City, MY</p>
+            <ul>
+                <li>Do food quality and quantity check.</li>
+                <li>Work both Open and Closing Shift.</li>
+                <li>Experienced handling Peak / Busy hour.</li>
+            </ul>
+        </div>
+        <div class="experience-entry">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <img class="marquee-img" src="work4.jpg" alt="Work">
+                <img class="marquee-img" src="work44.jpeg" alt="Second Work Pic">
+                <img class="marquee-img" src="work444.jpeg" alt="Third Work Pic">
+                <img class="marquee-img" src="work4444.jpeg" alt="Third Work Pic">
+
+            </div>
+        </div>
+        <div class="details">
+            <h2>FoodPanda Rider | Food & Delivery</h2>
+            <p><strong>Dates:</strong> January 2024 – Current | <strong>Location:</strong> Malacca, Johor, MY</p>
+            <ul>
+                <li> Do when have extra time.</li>
+                <li> Usually around 8 hours working time.</li>
+                <li> Also register as ShopeeFood and Grab.</li>
+            </ul>
+</div>
+</div>
+        <div class="experience-entry">
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <img class="marquee-img" src="work5.jpg" alt="Work">
+                <img class="marquee-img" src="work55.jpg" alt="Second Work Pic">
+                <img class="marquee-img" src="work555.jpg" alt="Third Work Pic">
+                <img class="marquee-img" src="work5555.jpg" alt="Third Work Pic">
+                <img class="marquee-img" src="work55555.jpg" alt="Third Work Pic">
+                <img class="marquee-img" src="work555555.jpg" alt="Third Work Pic">
+                <img class="marquee-img" src="work5.jpg" alt="Third Work Pic">
+ </div>
+</div>
+       <div class="details">
+            <h2>Mobile Gadgets Repair | Hardware</h2>
+            <p><strong>Dates:</strong> October 2024 – January 2025 | <strong>Location:</strong> Malacca, Johor, MY</p>
+            <ul>
+                <li> Do when have extra time.</li>
+                <li> Depends on shift or 9-5.</li>
+                <li> Also do this as hobby.</li>
+            </ul>
+        </div> 
+    </div>
+</section>
+
+    <footer>
+
+        Copyright &copy;
+        <span style='font-size:20px;'>&#128513;</span>
+        MUHAMMAD AKMAL ZOLKEFLI
+    </footer>
+
+</div> 
+        </footer>
+          
+</body>
