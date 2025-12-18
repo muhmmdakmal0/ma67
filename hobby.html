@@ -1,0 +1,778 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Akmal - Personal Website</title>
+
+    <style>
+        /* Base Styling */
+        body {
+            background-image: url('mybackground.jpg');
+	    background-attachment: fixed;
+    	    background-position: center;
+    	    background-repeat: no-repeat;
+   	    background-size: 1550px 695px;
+            font-family: Arial, Courier, monospace;
+            text-align: center;
+      
+        }
+.content-box {
+    
+    background-color: rgb(3, 196, 255);
+    padding: 3px;
+    border-radius: 5px;
+    color:#000000
+    
+}
+
+        h2 {
+            color: #3498db;
+	        font-size: 2em;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Header and Footer */
+        header {
+            background-color: #000000;
+            color: white;
+            padding: 0px 0 0px 0;
+            font-size: 1.5em;
+            letter-spacing: 2px;
+            text-align: center;
+            padding-left: 0px;
+
+	    background-image: url('Header1.jpg'); 
+            background-size: cover;
+            background-position: right;
+            background-color: #000000; 
+            color: white;
+        }
+
+        header h1 {
+            color: white;
+            background-color: #000000;
+            
+            font-size: 1.2em;
+        }
+
+        footer {
+            background-color: #000000;
+            color: white;
+            padding: 10px 0;
+            font-size: 0.9em;
+            clear: both; 
+            margin-top: 5px;
+        }
+
+        /* Top Navigation Bar */
+        nav.top-navigation {
+            background-color: #222222;
+            color: white;
+            display: flex;
+            justify-content: flex-start;
+            padding: 5px 20px;
+        }
+
+        nav.top-navigation a, nav.top-navigation div {
+            color: white;
+            padding: 5px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        nav.top-navigation a:hover, nav.top-navigation div:hover {
+            background-color: #3498db;
+        }
+
+       
+        /* Main Content Area */
+        .content-container {
+            margin-left: 0px;
+            padding: 20px;
+            text-align: center;
+        }
+
+
+        
+        /* Clearfix floating elements */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Styling for all content blocks */
+        section {
+            padding: 100px;
+            margin-bottom: 100px;
+	        margin-left: 150px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+            width: 80%; 
+            box-sizing: border-box;
+            text-align: center;
+        }
+        #photography {
+            background-color: #ad3a3a;
+        }
+        #exercise {
+            background-color: #3aad49;
+        }
+        #gaming {
+            background-color: #3a40ad;    
+        }
+        #revision-timetable {
+            background-color: #adad3a;    
+        }
+        
+        section p {
+            text-align: justify;
+        }
+
+        
+/* photo grid */
+.photo-gallery {
+    display: flex;       
+    flex-wrap: wrap;     
+    gap: 10px;           
+    padding: 10px;       
+    
+}
+
+/* Individual photo container */
+.photo-item {
+    
+    flex: 1 1 calc(50% - 5px); 
+    box-shadow: 0 2px 4px rgba(0, 4, 8, 2); 
+    border-radius: 4px; 
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out; 
+}
+
+
+.photo-item img {
+    display: block;
+    width: 100%;             
+    height: 250px;           
+    object-fit: cover;       
+}
+
+
+@media (max-width: 600px) {
+    .photo-item {
+        
+        flex: 1 1 100%;
+        margin-bottom: 10px;
+    }
+}
+/* Games Section Styling */
+.game-item {
+    
+   
+    width: 100%;    
+    height: 400px; 
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 4, 8, 2);
+    border-color: #f2f2f2;
+    
+}
+
+.gif-placeholder img {
+   
+    max-width: 300px;   
+    border-radius: 20px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(34, 0, 255);   
+}
+
+      /* Slideshow Styling */
+.slideshow-container {
+  max-width: 50%; 
+  position: relative;
+  margin: auto;
+  margin-bottom: 70px;
+  border-radius: 0px; 
+  overflow: hidden; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #3498db; 
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/* General Reset & Body Style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; 
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #f90a0a;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: 0;
+    overflow: hidden; 
+    height: 600px; 
+}
+
+/* Image styles */
+.mySlides img {
+    width: 100%;
+    
+    object-fit: cover; 
+    height: 600px; 
+    display: block;
+}
+
+/* Hide the slides by default */
+.mySlides {
+    display: none;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Navigation Dots Styling */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Main Content Area */
+.content {
+    padding: 20px;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+
+.portrait-container {
+    
+    max-width: 200px;   
+    border-radius: 8px;
+    overflow: visible;
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    flex-direction: row;
+    
+}
+
+/* Gif Styles */
+.portrait-media {
+    display: block;
+    width: 100%;    
+    height: 500px; 
+    object-fit: cover; 
+    box-shadow: 0 4px 12px rgba(0, 4, 8, 2);
+}
+/* Revision Timetable Styles */
+
+/* Outer Container & Header */
+.timetable-container {
+    width: 95%; 
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #f8f8ff; 
+    border-radius: 15px;
+    overflow: hidden; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    
+    background-image: linear-gradient(135deg, #f0f8ff, #e6e6fa); 
+    padding-bottom: 20px;
+}
+
+.timetable-header {
+    font-family: 'Arial Black', sans-serif; 
+    font-size: 2.5em;
+    padding: 30px 0;
+    margin: 0;
+    color: #7e2fb6; 
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+    
+    background-image: linear-gradient(to right, #989898, #565656, #000000); 
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Grid Layout */
+.grid-timetable {
+    display: grid;
+   
+    grid-template-columns: 120px repeat(7, 1fr); 
+    border-top: 2px solid #9932cc;
+    border-left: 2px solid #9932cc;
+    font-size: 0.9em;
+    line-height: 1.3;
+}
+
+/* Individual Cell Styling */
+.grid-cell {
+    border-right: 1px solid rgba(153, 50, 204, 0.5); 
+    border-bottom: 1px solid rgba(153, 50, 204, 0.5); 
+    padding: 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60px; 
+    box-sizing: border-box;
+}
+
+/* Header Row Styling (Days) */
+.day-header, .day-header-empty {
+    background-color: #8a2be2; 
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-bottom: 2px solid #9932cc;
+    height: 40px;
+}
+
+.day-header-empty {
+    background-color: #4b0082;
+}
+
+/* Time Label Column */
+.time-label {
+    background-color: #1e05fe;
+    color: #ffffff;
+    font-weight: bold;
+    border-right: 2px solid #373636;
+    line-height: 1.1;
+    font-size: 0.85em;
+}
+
+/* Subject Blocks */
+.subject-block {
+    color: #f60707;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 2px;
+    cursor: default;
+    transition: transform 0.2s;
+    line-height: 1.2;
+}
+
+.subject-block:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+/* Color Palette */
+.color-1 { background-color: #676666; } 
+.color-2 { background-color: #989998; } 
+.color-3 { background-color: #fff306; } 
+.color-4 { background-color: #05fc26; } 
+
+/* Break Rows */
+.time-break {
+    background-color: #9932cc; 
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    height: 30px;
+    border-bottom: 2px solid #9932cc;
+}
+
+.break-span {
+    background-color: #e0caff; 
+    
+    border-right: none;
+    border-bottom: 2px solid #9932cc; 
+    height: 30px;
+}
+
+/* Styling for Sat/Sun blocks */
+.rest-block {
+    background-color: #1cff08; 
+    font-weight: bold;
+    color: #f4f807;
+}
+
+.fun-block {
+    background-color: #ffcc00; 
+    font-weight: bold;
+    color: #4b0082;
+    font-size: 1.1em;
+}
+
+.alt-time {
+    font-size: 0.8em;
+}
+
+
+@media (max-width: 768px) {
+    .timetable-container {
+        width: 100%;
+        margin: 20px 0;
+        border-radius: 0;
+    }
+    
+    .timetable-header {
+        font-size: 1.8em;
+        padding: 20px 0;
+    }
+
+    .grid-timetable {
+        
+        grid-template-columns: 80px repeat(7, 1fr); 
+        font-size: 0.7em;
+    }
+
+    .grid-cell {
+        height: 50px;
+        padding: 5px 2px;
+    }
+
+    .day-header, .day-header-empty {
+        height: 30px;
+        font-size: 0.8em;
+    }
+    
+    /* Make break rows thinner */
+    .time-break, .break-span {
+        height: 20px;
+    }
+}
+    </style>
+<body>
+
+    
+
+    <nav class="top-navigation">
+        <div style="font-style: italic; margin-right: 15px;"></div>
+	<a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/index.html">HOME</a>
+   <a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/WORK/WORK.html">WORK</a>
+   <a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/EDUCATION/EDUCATION.html">EDUCATION</a>
+   <a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/HOBBY/HOBBY.html">HOBBY</a>
+   <a href="file:///C:/Muhammad%20Akmal%20-%20Personal%20Website/GALLERY/GALLERY.html">GALLERY</a>
+    </nav>
+
+    <header>
+        <h1>Hobby Section :3</h1>
+    </header>
+    <header class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="header1.jpg" style="width:100%">
+            <div class="slide-caption">Image 1: Gaming</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="header2.jpg" style="width:100%">
+            <div class="slide-caption">Image 2: Photography</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="header3.jpg" style="width:100%">
+            <div class="slide-caption">Image 3: Excercise</div>
+        </div>
+
+        <div style="text-align:center; position:absolute; bottom:10px; width:100%;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </header>
+
+    <script src="script.js"></script>
+
+
+<div class="photography-box-style">
+<section id="photography" class="align-centre">
+            <h2>Photography</h2>
+    
+    <div class="photo-gallery">
+        <div class="photo-item">
+            <img src="photography1.jpg" alt="A photo of random.">
+        </div>
+        <div class="photo-item">
+            <img src="photography2.jpg" alt="A photo of random.">
+        </div>
+        <div class="photo-item">
+            <img src="photography3.jpg" alt="A photo of a random.">
+        </div>
+        <div class="photo-item">
+            <img src="photography4.jpg" alt="A photo of a random.">
+        </div>
+        </div>
+                   
+ </div>
+   <section id="exercise" class="align-left">
+            <h2>Exercise</h2>
+          
+            <div class="photo-gallery">
+        <div class="photo-item">
+            <img src="exercise1.jpg" alt="A photo of random.">
+        </div>
+        <div class="photo-item">
+            <img src="exercise2.jpg" alt="A photo of random.">
+        </div>
+        <div class="photo-item">
+            <img src="exercise3.jpg" alt="A photo of a random.">
+        </div>
+        <div class="photo-item">
+            <img src="exercise4.jpg" alt="A photo of a random.">
+        </div>
+        </div>
+        </section>
+
+        <div style="clear: both;"></div>
+
+        <section id="gaming" class="align-centre">
+    <h2>Games And Gameplay</h2>
+   <p>Some of games and other hobbies below.</p></div>
+            <div class="gif-placeholder">
+                <img src="gameplay1.gif" alt="Interstellar GIF" class="game-item">
+        
+                <img src="gameplay2.gif" alt="Inception GIF" class="game-item">
+        
+                <img src="gameplay3.gif" alt="The Shawshank Redemption GIF" class="game-item">
+        
+                <img src="gameplay4.gif" alt="The Truman Show GIF" class="game-item">
+                </div>
+          <p><div class="content-box">Casual gamer.</p></div> 
+          <p><div class="content-box">Enjoy story and FPS genre.</p></div>
+          <p><div class="content-box">Frequent hobby.</p></div>
+           <p><div class="content-box">Minimum 1 Hour.</p></div>  
+    </div>
+
+        
+<h2>Others</h2>
+<div class="portrait-container">
+
+    <img src="others2.gif" alt="Food Delivery" class="portrait-media">
+<img src="others3.gif" alt="Repairing Tech" class="portrait-media">
+    <img src="others4.gif" alt="Repairing Tech" class="portrait-media">
+<img src="others5.jpg" alt="Repairing Tech" class="portrait-media">
+    <img src="others6.jpg" alt="Repairing Tech" class="portrait-media">
+</div>
+
+<p><div class="content-box">Food delivery.</p></div> 
+<p><div class="content-box">Affiliate (probably LOL).</p></div>
+<p><div class="content-box">Video Editing.</p></div>
+<p><div class="content-box">Collect / Read books, manga.</p></div> 
+<p><div class="content-box">Tech Repair.</p></div> 
+
+</div>
+</section>
+
+<section id="revision-timetable">
+    <h2>Time Table</h2>
+    <div class="timetable-container">
+        <h2 class="timetable-header">Daily Routine</h2>
+        
+        <div class="grid-timetable">
+            
+            <div class="grid-cell day-header-empty"></div>
+            <div class="grid-cell day-header">MON</div>
+            <div class="grid-cell day-header">TUE</div>
+            <div class="grid-cell day-header">WED</div>
+            <div class="grid-cell day-header">THU</div>
+            <div class="grid-cell day-header">FRI</div>
+            <div class="grid-cell day-header">SAT</div>
+            <div class="grid-cell day-header">SUN</div>
+            
+            <div class="grid-cell time-label">6 AM - 10 AM</div>
+            <div class="grid-cell subject-block color-1"> Morning preparation  <br> Work</div>
+            <div class="grid-cell subject-block color-1"> Morning preparation <br> Work</div>
+            <div class="grid-cell subject-block color-1"> Morning preparation <br> Work</div>
+            <div class="grid-cell subject-block color-1"> Morning preparation <br> Work</div>
+            <div class="grid-cell subject-block color-1"> Morning preparation <br> Work / Hobbies</div>
+            <div class="grid-cell subject-block color-1 alt-time">10 AM - 12 PM<br> Scrolling <br> Sleep </div>
+            <div class="grid-cell rest-block">REST!</div>
+
+            <div class="grid-cell time-break">BREAK!</div>
+            <div class="grid-cell break-span"></div>
+            <div class="grid-cell break-span"></div>
+            <div class="grid-cell break-span"></div>
+            <div class="grid-cell break-span"></div>
+            <div class="grid-cell break-span"></div>
+            <div class="grid-cell break-span"></div>
+            <div class="grid-cell break-span"></div>
+
+            <div class="grid-cell time-label">11:15 AM - <br> 1:15 PM</div>
+            <div class="grid-cell subject-block color-2"> Continue Work </div>
+            <div class="grid-cell subject-block color-2"> Continue Work </div>
+            <div class="grid-cell subject-block color-2"> Continue Work </div>
+            <div class="grid-cell subject-block color-2"> Continue Work </div>
+            <div class="grid-cell subject-block color-2"> Jumaat preparation </div>
+            <div class="grid-cell subject-block color-2 alt-time">12:45 AM - <br> 2:45 PM <br> Sleep </div>
+            <div class="grid-cell rest-block">REST!</div>
+
+            <div class="grid-cell time-break">BREAK!</div>
+            <div class="grid-cell break-span"></div>
+            <div class="grid-cell break-span"></div>
+            <div class="grid-cell break-span"></div>
+            <div class="grid-cell break-span"></div>
+            <div class="grid-cell break-span"></div>
+            <div class="grid-cell break-span"></div>
+            <div class="grid-cell break-span"></div>
+
+            <div class="grid-cell time-label">2 PM - 4 PM</div>
+            <div class="grid-cell subject-block color-3"> Running Errands <br> Hobbies</div>
+            <div class="grid-cell subject-block color-3"> Running Errands <br> Hobbies</div>
+            <div class="grid-cell subject-block color-3"> Running Errands <br> Hobbies</div>
+            <div class="grid-cell subject-block color-3"> Running Errands <br> Hobbies</div>
+            <div class="grid-cell subject-block color-3"> Running Errands <br> Hobbies</div>
+            <div class="grid-cell subject-block color-3 alt-time">3 PM - 5 PM<br>Scrolling <br> Sleep</div>
+            <div class="grid-cell rest-block">REST!</div>
+
+            <div class="grid-cell time-break">BREAK!</div>
+            <div class="grid-cell break-span"></div>
+            <div class="grid-cell break-span"></div>
+            <div class="grid-cell break-span"></div>
+            <div class="grid-cell break-span"></div>
+            <div class="grid-cell break-span"></div>
+            <div class="grid-cell break-span"></div>
+            <div class="grid-cell break-span"></div>
+
+            <div class="grid-cell time-label">4:15 PM - <br> 6:15 PM</div>
+            <div class="grid-cell subject-block color-4">Afternoon tea<br>Exercise</div>
+            <div class="grid-cell subject-block color-4">Afternoon tea<br>Exercise</div>
+            <div class="grid-cell subject-block color-4">Afternoon tea<br>Exercise</div>
+            <div class="grid-cell subject-block color-4">Afternoon tea<br>Exercise</div>
+            <div class="grid-cell subject-block color-4">Afternoon tea<br>Exercise</div>
+            <div class="grid-cell fun-block">No Schedule!</div>
+            <div class="grid-cell rest-block">REST!</div>
+
+        </div>
+    </div>
+</section>
+
+                
+        <div style="clear: both;"></div>
+
+    </div> <footer>
+        Copyright &copy;
+        <span style='font-size:20px;'>&#128513;</span>
+        MUHAMMAD AKMAL ZOLKEFLI
+    </footer>
+
+</div> <footer>
+        </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            
+            
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }    
+            
+           
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            
+            
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            
+            
+            setTimeout(showSlides, 4000); 
+        }
+
+        
+        function currentSlide(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+
+         
+          slideIndex = n;
+
+          
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+
+          
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+    </script>
+    </body>
+</html>
+</body>
+</html>
