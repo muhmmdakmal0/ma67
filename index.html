@@ -602,6 +602,42 @@ audio {
   from {opacity: .4} 
   to {opacity: 1}
 }
+
+.sidebar-digital-clock {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 20px 0;
+}
+
+#clock-time-display {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+#clock-date-display {
+    font-size: 14px;
+    font-weight: 400;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#clock-day-display {
+    font-size: 12px;
+    font-weight: 600;
+    color: #ff0000; /* Red accent to match your previous theme */
+    text-transform: uppercase;
+    margin-top: 4px;
+    letter-spacing: 3px;
+}
     </style>
 </head>
 <body>
@@ -636,7 +672,12 @@ audio {
                 <a href ="https://share.google/xxAOPGXmc5TIiIVRC" target="_blank"><img src="insta.jpg" width="30" height="30" alt="Instagram Icon" style="border-radius: 30px; width: 50px; height: 50;"></a>
 		<a href ="https://wa.me/601136006542?text=I'm%20interested%20with%20your%20business.%20How%20can%20I%20schedule%20it?%20"><img src="whatsapp.jpg" alt="Instagram Icon" style="border-radius: 30px; width: 50px; height: 50;"></a>
             </div>
-        </div>
+<div class="sidebar-digital-clock">
+    <div id="clock-time-display"></div>
+    <div id="clock-date-display"></div>
+    <div id="clock-day-display"></div>
+</div>
+</div>
     </nav>
 
     <div class="content-container clearfix">
@@ -978,11 +1019,39 @@ audio {
           slides[slideIndex-1].style.display = "block";  
           dots[slideIndex-1].className += " active";
         }
-    </script>
-    </body>
-</html>
-</body>
+function startDigitalClock() {
+    function update() {
+        const now = new Date();
+        
+        
+        const timeString = now.toLocaleTimeString([], { 
+            hour: '2-digit', 
+            minute: '2-digit', 
+            second: '2-digit', 
+            hour12: true 
+        });
 
+        
+        const dateOptions = { day: 'numeric', month: 'long', year: 'numeric' };
+        const dateString = now.toLocaleDateString('en-US', dateOptions);
+
+       
+        const dayString = now.toLocaleDateString('en-US', { weekday: 'long' });
+
+        document.getElementById('clock-time-display').textContent = timeString;
+        document.getElementById('clock-date-display').textContent = dateString;
+        document.getElementById('clock-day-display').textContent = dayString;
+    }
+
+    setInterval(update, 1000);
+    update();
+}
+
+
+document.addEventListener('DOMContentLoaded', startDigitalClock);
+</script>
+</body>
 </html>
+
 
 
